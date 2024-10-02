@@ -1,4 +1,5 @@
 #!/bin/bash
+test
 echo "where there is a will, there is a bread. Always remember to share"
 echo "Hey. Please remember to manually make a backup of the descriptions of the playlists" # I had a false scare before only to find out it's a browser issue, but I still don't trust google regardless.
 idlists="~/Documents/idlists" # where all the lists of all downloaded ids are located.
