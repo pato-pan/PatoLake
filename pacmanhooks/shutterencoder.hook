@@ -1,0 +1,12 @@
+# currently not working.
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = shutter-encoder
+
+[Action]
+Description = I reported this issue on both the aur package and the github page.... why is this not fixed. It's literally a basic feature, the program won't work if you don't do this. Why is this a thing
+# Depends is optional if this should depend on another package
+Depends =
+When = PostTransaction
+Exec = shutterencoder.sh
