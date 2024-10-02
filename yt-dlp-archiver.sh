@@ -110,7 +110,7 @@ mpegset=(-n -c:v copy -c:a aac)
 parent="$Music/"
 isparent=""
 compateac3 "$parent"
-cd "$Music/anotherfolder/"
+parent="$Music/anotherfolder/"
 isparent=""
 compateac3 "$parent"
 
