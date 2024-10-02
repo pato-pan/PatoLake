@@ -60,11 +60,11 @@ yt-dlp --download-archive willit.txt --yes-playlist $videolite $ytlist"PLJ49NV73
 
 echo "archiving channels"
 echo "HealthyGamerGG"
-yt-dlp --download-archive HealthyGamerGG.txt --match-filter "is_live != true & was_live != true" $frugal $ytchannel"UClHVl2N3jPEbkNJVx-ItQIQ" -o "$Videos/Archives/Archives/HealthyGamerGG/$nameformat"
+yt-dlp --download-archive HealthyGamerGG.txt --match-filter "is_live != true & was_live != true" $frugal $ytchannel"UClHVl2N3jPEbkNJVx-ItQIQ" -o "$Videos/Archives/HealthyGamerGG/$nameformat"
 echo "Daniel Hentschel"
-yt-dlp --download-archive DanHentschel.txt --match-filter "is_live != true & was_live != true" $frugal $ytchannel"UCYMKvKclvVtQZbLrV2v-_5g" -o "$Videos/Archives/Archives/Daniel Hentschel/$nameformat"
+yt-dlp --download-archive DanHentschel.txt --match-filter "is_live != true & was_live != true" $frugal $ytchannel"UCYMKvKclvVtQZbLrV2v-_5g" -o "$Videos/Archives/Daniel Hentschel/$nameformat"
 echo "JCS"
-yt-dlp --download-archive JCS.txt --match-filter "is_live != true & was_live != true" $videolite $ytchannel"UCYwVxWpjeKFWwu8TML-Te9A" -o "$Videos/Archives/Archives/JCS/$nameformat"
+yt-dlp --download-archive JCS.txt --match-filter "is_live != true & was_live != true" $videolite $ytchannel"UCYwVxWpjeKFWwu8TML-Te9A" -o "$Videos/Archives/JCS/$nameformat"
 
 echo "Finally. The last step is to create compatibility for some codecs (not extensions or containers, codecs)"
 read -n 1 -t 30 -s
@@ -73,7 +73,7 @@ echo "Create compatibility for eac3"
 #note: flaw. Videos will be redownloaded unnecessarily.
 function compateac3() {
 	local parent="$1"
-	if [ isparent !="yes" ]; then # runs the conversion on the parent folder.
+	if [ isparent != "yes" ]; then # runs the conversion on the parent folder.
 		cd "$parent"
 		conveac3
 		isparent="yes"
