@@ -13,6 +13,6 @@
 #default="-r 10.0 -c:v libx265 -crf 51 -preset slow -vf scale="256:144" -ac 1 -c:a aac -ar 32k -aq 0.3"
 #videobetter="-r 10.0 -c:v libx265 -crf 51 -preset slow -vf scale="640:360" -ac 1 -c:a aac -ar 32k -aq 0.3"
 #inconsistentres="-r 10.0 -c:v libx265 -crf 51 -preset slow -vf scale="-2:360" -ac 1 -c:a aac -ar 32k -aq 0.3"
-# Note: I considered turning this into variables, but through wafflin.sh I learned that variables have unpredictable behavior when used either in for or if statements. So, this is postponed.
+# Note: I considered turning this into variables, but through yt-dlp-archiver.sh I learned that variables have unpredictable behavior when used either in for or if statements. So, this is postponed.
 
 This script will go through a major rewrite so it's in progress and unfinished, the actual commands aren't even here
