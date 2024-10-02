@@ -1,3 +1,5 @@
+#!/bin/bash
+echo "where there is a will, there is a bread. Always remember to share"
 # Makes all files have a date created on their metadata, which will equal the date modified. If the file already has a date created, it won't change anything.
 # WARNING: This won't make a backup and you can't revert the changes!
 
