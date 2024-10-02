@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = ffmpeg-obs obs-studio-tytan652
+
+[Action]
+Description = obs stops working whenever this is updated. It needs to be rebuilt, and by deleting the cache you force it to rebuild.
+# Depends is optional if this should depend on another package
+Depends =
+When = PreTransaction
+Exec = obstytanffmpeg.sh
