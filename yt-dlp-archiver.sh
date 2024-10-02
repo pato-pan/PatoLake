@@ -95,7 +95,7 @@ function conveac3() {
 			count="${f//[^[]}"
 			for c in $(seq ${#count}); do id=${id#*[}; done; # removes everything before the last [
 			count="${f//[^\]]}"
-			for c in $(seq ${#count}); do id=${id%]*}; done; # removes everything after the last ]. unnecessary. only helps if I change the name format. usually, just id=${f%]*} instead and do it above the removal of [
+			for c in $(seq ${#count}); do id=${id%]*}; done;  # removes everything after the last ]. unnecessary. only helps if I change the name format. usually and preferably, just id=${f%]*} instead and do it above the removal of [
 			yt-dlp --force-overwrites "${bestanometa[@]}" $id -o "$nameformat"
 #			ffmpeg -i "$f" "${mpegset[@]}" compat/"${f%.m4a}".flac # better quality, significantly higher filesize
 			ffmpeg -i "$f" "${mpegset[@]}" compat/"${f%.m4a}".m4a #I know adding m4a here is redundant. It should only be just $f instead. This is only here for consistency.
