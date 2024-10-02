@@ -11,7 +11,7 @@ besta='--cookies cookies.txt --geo-bypass --embed-metadata --embed-thumbnail --e
 bestmp3='--cookies cookies.txt --geo-bypass --embed-metadata --embed-thumbnail --embed-chapters -x -c -f ba --audio-format mp3 --audio-quality 0'
 bestv='--cookies cookies.txt --geo-bypass --embed-metadata --embed-thumbnail --sub-langs all,-live_chat,-rechat --embed-chapters -c'
 audiolite='--cookies cookies.txt --geo-bypass --embed-metadata --embed-thumbnail --embed-chapters -x -c --audio-format mp3 --audio-quality 96k'
-videolite='--cookies cookies.txt --geo-bypass --embed-metadata --embed-thumbnail --embed-chapters --sub-langs all,-live_chat,-rechat -f "bv*[height<=480]" -c' # I prefer 360p as lowest, but some videos may not offer 360p, so I go for 480p to play it safe
+videolite='--cookies cookies.txt --geo-bypass --embed-metadata --embed-thumbnail --embed-chapters --sub-langs all,-live_chat,-rechat -f bv*[height<=480] -c' # I prefer 360p as lowest, but some videos may not offer 360p, so I go for 480p to play it safe
 frugal='--cookies cookies.txt --geo-bypass --embed-metadata --embed-thumbnail --embed-chapters --sub-langs all,-live_chat,-rechat -S +size,+br,+res,+fps --audio-format aac --audio-quality 32k -c' #note to self: don't use -f "wv*[height<=240]+wa*"
 bestanometa=(--geo-bypass --embed-thumbnail --embed-chapters -x -c -f ba --audio-format best --audio-quality 0)
 cd $idlists
