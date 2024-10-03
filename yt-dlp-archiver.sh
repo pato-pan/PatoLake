@@ -58,11 +58,11 @@ yt-dlp --download-archive willit.txt --yes-playlist $videolite $ytlist"PLJ49NV73
 
 echo "archiving channels"
 echo "HealthyGamerGG"
-yt-dlp --download-archive HealthyGamerGG.txt --match-filter "is_live != true & was_live != true & original_url!*=/shorts/ & url!*=/shorts/" $frugal $ytchannel"UClHVl2N3jPEbkNJVx-ItQIQ/videos" -o "$Videos/Archives/HealthyGamerGG/$nameformat"
+yt-dlp --download-archive HealthyGamerGG.txt --match-filter "is_live != true & was_live != true & live_status != was_live & live_status != post_live & live_status != is_upcoming & original_url!*=/shorts/ & url!*=/shorts/" $frugal $ytchannel"UClHVl2N3jPEbkNJVx-ItQIQ/videos" -o "$Videos/Archives/HealthyGamerGG/$nameformat"
 echo "Daniel Hentschel"
-yt-dlp --download-archive DanHentschel.txt --match-filter "is_live != true & was_live != true" $frugal $ytchannel"UCYMKvKclvVtQZbLrV2v-_5g" -o "$Videos/Archives/Daniel Hentschel/$nameformat"
+yt-dlp --download-archive DanHentschel.txt --match-filter "is_live != true & was_live != true & live_status != was_live & live_status != post_live & live_status != is_upcoming" $frugal $ytchannel"UCYMKvKclvVtQZbLrV2v-_5g" -o "$Videos/Archives/Daniel Hentschel/$nameformat"
 echo "JCS"
-yt-dlp --download-archive JCS.txt --match-filter "is_live != true & was_live != true" $videolite $ytchannel"UCYwVxWpjeKFWwu8TML-Te9A" -o "$Videos/Archives/JCS/$nameformat"
+yt-dlp --download-archive JCS.txt --match-filter "is_live != true & was_live != true & live_status != was_live & live_status != post_live & live_status != is_upcoming" $videolite $ytchannel"UCYwVxWpjeKFWwu8TML-Te9A" -o "$Videos/Archives/JCS/$nameformat"
 
 echo "Finally. The last step is to create compatibility for some codecs (not extensions or containers, codecs)"
 read -n 1 -t 30 -s
