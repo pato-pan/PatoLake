@@ -58,7 +58,7 @@ yt-dlp --download-archive willit.txt --yes-playlist $videolite $ytlist"PLJ49NV73
 
 echo "archiving channels"
 echo "HealthyGamerGG"
-yt-dlp --download-archive HealthyGamerGG.txt --match-filter "is_live != true & was_live != true" $frugal $ytchannel"UClHVl2N3jPEbkNJVx-ItQIQ" -o "$Videos/Archives/HealthyGamerGG/$nameformat"
+yt-dlp --download-archive HealthyGamerGG.txt --match-filter "is_live != true & was_live != true & original_url!*=/shorts/ & url!*=/shorts/" $frugal $ytchannel"UClHVl2N3jPEbkNJVx-ItQIQ/videos" -o "$Videos/Archives/HealthyGamerGG/$nameformat"
 echo "Daniel Hentschel"
 yt-dlp --download-archive DanHentschel.txt --match-filter "is_live != true & was_live != true" $frugal $ytchannel"UCYMKvKclvVtQZbLrV2v-_5g" -o "$Videos/Archives/Daniel Hentschel/$nameformat"
 echo "JCS"
