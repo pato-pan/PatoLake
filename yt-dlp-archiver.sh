@@ -115,3 +115,6 @@ compateac3 "$parent"
 echo "it's done!"
 read -n 1 -t 30 -s
 exit
+
+# (not used, untested) --match-filter "duration < 3600" exclude videos that are over one hour
+# (not used, untested) --match-filter "duration > 120" exclude videos that are under 2 minutes
