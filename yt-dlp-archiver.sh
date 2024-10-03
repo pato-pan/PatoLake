@@ -33,8 +33,6 @@ read -n 1 -t 3 -s
 
 echo downloading some collections
 read -n 1 -t 3 -s
-echo going to funny reddit
-read -n 1 -t 3 -s
 echo funny videos from reddit
 yt-dlp --download-archive funnyreddit.txt --yes-playlist $bestv $ytlist"PL3hSzXlZKYpM8XhxS0v7v4SB2aWLeCcUj" -o "$Videos/funnyreddit/$nameformat"
 read -n 1 -t 3 -s
