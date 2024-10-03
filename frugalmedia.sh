@@ -16,16 +16,16 @@ echo "where there is a will, there is a bread. Always remember to share"
 default=(-r 10.0 -c:v libx265 -crf 51 -preset slow -vf scale="256:144" -ac 1 -c:a aac -ar 32k -aq 0.3)
 videobetter=(-r 10.0 -c:v libx265 -crf 51 -preset slow -vf scale="640:360" -ac 1 -c:a aac -ar 32k -aq 0.3)
 variedres=(-r 10.0 -c:v libx265 -crf 51 -preset slow -vf scale="-2:360" -ac 1 -c:a aac -ar 32k -aq 0.3)
-function remnanter() {
-	local soy=("$@")
+function frugal() {
+	local preset=("$@")
 	for f in *.*; do
-		ffmpeg -hwaccel cuda -n -i "$f" "${soy[@]}" "remnants/$f";
+		ffmpeg -hwaccel cuda -n -i "$f" "${preset[@]}" "frugal/$f";
 	done
 }
 
 cd "~/Videos/Camera/"
-remnanter "${default[@]}"
+frugal "${default[@]}"
 cd "~/Videos/MyGameplay/"
-remnanter "${videobetter[@]}"
+frugal "${videobetter[@]}"
 cd "~/Videos/Youtube/"
-remnanter "${variedres[@]}"
+frugal "${variedres[@]}"
