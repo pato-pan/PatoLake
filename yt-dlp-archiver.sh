@@ -14,9 +14,9 @@ audiolite='--cookies cookies.txt --geo-bypass --embed-metadata --embed-thumbnail
 videolite='--cookies cookies.txt --geo-bypass --embed-metadata --embed-thumbnail --embed-chapters --sub-langs all,-live_chat,-rechat -f -f bv*[height<=480]+ba/b[height<=480] -c' # I prefer 360p as lowest, but some videos may not offer 360p, so I go for 480p to play it safe
 frugal='--cookies cookies.txt --geo-bypass --embed-metadata --embed-thumbnail --embed-chapters --sub-langs all,-live_chat,-rechat -S +size,+br,+res,+fps --audio-format aac --audio-quality 32k -c' #note to self: don't use -f "wv*[height<=240]+wa*"
 bestanometa=(--geo-bypass --embed-thumbnail --embed-chapters -x -c -f ba --audio-format best --audio-quality 0)
-#prevents your account from getting unavailable on all videos, even when watching, when using cookies.txt. I prefer entering this on the terminal session, rather than having it on by default. Define this variable if you are about to make a lot of downloads and require cookies.txt. Otherwise, just don't use a cookies.txt file.
-#antiban='--sleep-requests 1.5 --min-sleep-interval 60 --max-sleep-interval 90'
-antiban=''
+#prevents your account from getting unavailable on all videos, even when watching, when using cookies.txt. This is not foolproof.
+antiban='--sleep-requests 1.5 --min-sleep-interval 60 --max-sleep-interval 90'
+#antiban=''
 cd $idlists
 
 #yt-dlp -U
