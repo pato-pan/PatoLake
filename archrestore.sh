@@ -3,8 +3,6 @@ echo "where there is a will, there is a bread. Always remember to share"
 # An easy program that will easily reinstall all the programs you used to have. Based on the former applist.txt in docu. I chose this over copy and pasting the whole system because it should be better for new system compatibility, disk lifespan, and efficiency. It also gives me freedom of choice, in case the system drive breaks but the other drive is fine and viceversa. I only need to restore what was lost, instead of everything.
 # Make sure to have veracrypt and gparted installed, and make the encryoted partitions before running.
 # Below are also some tips for operations you might want to do after install.
-# Note: Compare with applist, then remove applist.txt.
-# maybe integrate paru optionals.
 
 # The following should be run once you restore grub and mkinitcpio.conf. It's necessary for vms and other programs.
 sudo grub-mkconfig -o /boot/grub/grub.cfg
