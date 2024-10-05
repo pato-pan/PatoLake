@@ -291,31 +291,23 @@
 - /drives/HD/Piracy/incomplete/*
 - /drives/HD/Piracy/Seed/*
 - /drives/HD/Piracy/torbacks/share/*
-- /drives/HD/Videos/recs/Archive/*.mkv
-- /drives/HD/Videos/recs/Archive/*.mp4
-- /drives/HD/Videos/recs/Archive/old/*.mkv
-- /drives/HD/Videos/recs/Archive/old/*.mp4
-- /drives/HD/Videos/recs/Archive/trash/*.mkv
-- /drives/HD/Videos/recs/Archive/trash/*.mp4
-- /drives/HD/Videos/recs/Archive/2023*
-- /drives/HD/Videos/recs/Channel Recs/*/old/*.mkv
-- /drives/HD/Videos/recs/Channel Recs/*/old/*.mp4
-- /drives/HD/Videos/recs/Channel Recs/*/old/*.mov
-- /drives/HD/Videos/recs/Channel Recs/*/*.mkv
-- /drives/HD/Videos/recs/Channel Recs/*/*.mp4
-- /drives/HD/Videos/recs/Channel Recs/*/*.mov
-- /drives/HD/Videos/recs/Archive/remnants/old/*.mkv
-- /drives/HD/Videos/recs/Archive/remnants/old/*.mp4
-- /drives/HD/Videos/recs/Archive/remnants/*.mkv
-- /drives/HD/Videos/recs/Archive/remnants/*.mp4
-- /drives/HD/Videos/recs/Archive/remnants/2023*.mkv
-- /drives/HD/Videos/recs/Archive/remnants/2023*.mp4
-- /drives/HD/Videos/recs/Channel Recs/*/remnants/old/*.mkv
-- /drives/HD/Videos/recs/Channel Recs/*/remnants/old/*.mp4
-- /drives/HD/Videos/recs/Channel Recs/*/remnants/*.mkv
-- /drives/HD/Videos/recs/Channel Recs/*/remnants/*.mp4
-- /drives/HD/Videos/recs/Channel Recs/*/remnants/2023*.mkv
-- /drives/HD/Videos/recs/Channel Recs/*/remnants/2023*.mp4
+- /drives/HD/Videos/recs/camlog/*.mkv
+- /drives/HD/Videos/recs/camlog/*.mp4
+- /drives/HD/Videos/recs/camlog/old/*.mkv
+- /drives/HD/Videos/recs/camlog/old/*.mp4
+- /drives/HD/Videos/recs/camlog/trash/*.mkv
+- /drives/HD/Videos/recs/camlog/trash/*.mp4
+- /drives/HD/Videos/recs/Channel Recs/*.mkv
+- /drives/HD/Videos/recs/Channel Recs/*.mp4
+- /drives/HD/Videos/recs/Channel Recs/*.mov
+#- /drives/HD/Videos/recs/Archive/frugal/*.mkv
+#- /drives/HD/Videos/recs/Archive/frugal/*.mp4
+#- /drives/HD/Videos/recs/Archive/frugal/*/*.mkv
+#- /drives/HD/Videos/recs/Archive/frugal/*/*.mp4
+#- /drives/HD/Videos/recs/Channel Recs/*/frugal/*.mkv
+#- /drives/HD/Videos/recs/Channel Recs/*/frugal/*.mp4
+#- /drives/HD/Videos/recs/Channel Recs/*/frugal/*/*.mkv
+#- /drives/HD/Videos/recs/Channel Recs/*/frugal/*/*.mp4
 - /drives/HD/Cosmosis/*.qcow2
 - /drives/SD/VMs/*.qcow2
 - /drives/HD/Cosmosis/Backs/*
@@ -405,8 +397,6 @@
 - /drives/HD/Games/Minecraft/*
 - Games/Stuff/modding tools/RPGVXAce_RTP.zip
 - Games/Stuff/modding tools/nwjs*
-- /drives/HD/Galel/Other/BoberryGG.7z
-- /drives/HD/Galel/Other/BoberryGG/*
 # My even worse sacrificed stuff! Oh nooo!
 - /drives/HD/Cosmosis/External/**/Full/*
 - /drives/HD/Cosmosis/External/Devices/*/*
@@ -420,7 +410,7 @@
 - /drives/HD/Piracy/Shows/*
 #- /drives/HD/Videos/Projects/Completed/*
 
-# expected size per drive (outdated)
+# My expected size per drive (update this with yours to know how much space does your external backup device requires)
 # Root 16.6GB
 # HD 1.1TB
 # SD 410.9GB / 60.9GB
