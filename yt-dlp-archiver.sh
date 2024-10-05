@@ -7,13 +7,13 @@ Music="~/Music"
 Videos="~/Videos"
 ytlist="https://www.youtube.com/playlist?list="
 ytchannel="https://www.youtube.com/channel/"
-besta='--cookies cookies.txt --geo-bypass --embed-metadata --embed-thumbnail --embed-chapters -x -c -f ba --audio-format best --audio-quality 0'
-bestmp3='--cookies cookies.txt --geo-bypass --embed-metadata --embed-thumbnail --embed-chapters -x -c -f ba --audio-format mp3 --audio-quality 0'
-bestv='--cookies cookies.txt --geo-bypass --embed-metadata --embed-thumbnail --sub-langs all,-live_chat,-rechat --embed-chapters -c'
-audiolite='--cookies cookies.txt --geo-bypass --embed-metadata --embed-thumbnail --embed-chapters -x -c --audio-format mp3 --audio-quality 96k'
-videolite='--cookies cookies.txt --geo-bypass --embed-metadata --embed-thumbnail --embed-chapters --sub-langs all,-live_chat,-rechat -f -f bv*[height<=480]+ba/b[height<=480] -c' # I prefer 360p as lowest, but some videos may not offer 360p, so I go for 480p to play it safe
-frugal='--cookies cookies.txt --geo-bypass --embed-metadata --embed-thumbnail --embed-chapters --sub-langs all,-live_chat,-rechat -S +size,+br,+res,+fps --audio-format aac --audio-quality 32k -c' #note to self: don't use -f "wv*[height<=240]+wa*"
-bestanometa=(--geo-bypass --embed-thumbnail --embed-chapters -x -c -f ba --audio-format best --audio-quality 0)
+besta='--cookies cookies.txt --embed-metadata --embed-thumbnail --embed-chapters -x -c -f ba --audio-format best --audio-quality 0'
+bestmp3='--cookies cookies.txt --embed-metadata --embed-thumbnail --embed-chapters -x -c -f ba --audio-format mp3 --audio-quality 0'
+bestv='--cookies cookies.txt --embed-metadata --embed-thumbnail --sub-langs all,-live_chat,-rechat --embed-chapters -c'
+audiolite='--cookies cookies.txt --embed-metadata --embed-thumbnail --embed-chapters -x -c --audio-format mp3 --audio-quality 96k'
+videolite='--cookies cookies.txt --embed-metadata --embed-thumbnail --embed-chapters --sub-langs all,-live_chat,-rechat -f -f bv*[height<=480]+ba/b[height<=480] -c' # I prefer 360p as lowest, but some videos may not offer 360p, so I go for 480p to play it safe
+frugal='--cookies cookies.txt --embed-metadata --embed-thumbnail --embed-chapters --sub-langs all,-live_chat,-rechat -S +size,+br,+res,+fps --audio-format aac --audio-quality 32k -c' #note to self: don't use -f "wv*[height<=240]+wa*"
+bestanometa=(--embed-thumbnail --embed-chapters -x -c -f ba --audio-format best --audio-quality 0)
 #prevents your account from getting unavailable on all videos, even when watching, when using cookies.txt. This is not foolproof.
 antiban='--sleep-requests 1.5 --min-sleep-interval 60 --max-sleep-interval 90'
 #antiban=''
