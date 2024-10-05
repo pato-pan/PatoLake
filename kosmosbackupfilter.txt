@@ -225,19 +225,19 @@
 - Waydroid/data/system/package_cache/*
 - Waydroid/data/system/dropbox/*
 - Waydroid/data/system/*stats/*
-- /drives/HD/Programs/Waydroid/apk/*
+- /drives/*/Programs/Waydroid/apk/*
 - jellyfin/metadata/*
 - jellyfin/cache/*
 - jellyfin/work/data/subtitles/*
-- /drives/HD/Games/FlashPoint/FPSoftware/*
-- /drives/HD/Games/FlashPoint/Legacy/*
-- /drives/HD/Games/FlashPoint/Data/Images/*
-+ /drives/HD/Programs/AI/**.git
-+ /drives/HD/Programs/AI/**.github
+- FlashPoint/FPSoftware/*
+- FlashPoint/Legacy/*
+- FlashPoint/Data/Images/*
++ /drives/*/Programs/AI/**.git
++ /drives/*/Programs/AI/**.github
 - text-generation-webui/installer_files/*
 - text-generation-webui/.git/*
 - text-generation-webui/extensions/*
-- /drives/HD/Programs/AI/RVC-beta.7z
+- /drives/*/Programs/AI/RVC-beta.7z
 - RVC*/runtime/*
 - RVC*/pretrained_v2/*
 - RVC*/pretrained/*
@@ -285,53 +285,50 @@
 
 # My wares and trash
 - .mozilla/firefox/profiles/legacyhome/*
-- /drives/HD/Programs/Fodder/*
-- /drives/HD/Programs/trash/*
+- /drives/*/Programs/trash/*
 - RPG Maker MZ/data/MyProjects/trash/*
-- /drives/HD/Piracy/incomplete/*
-- /drives/HD/Piracy/Seed/*
-- /drives/HD/Piracy/torbacks/share/*
-- /drives/HD/Videos/recs/camlog/*.mkv
-- /drives/HD/Videos/recs/camlog/*.mp4
-- /drives/HD/Videos/recs/camlog/old/*.mkv
-- /drives/HD/Videos/recs/camlog/old/*.mp4
-- /drives/HD/Videos/recs/camlog/trash/*.mkv
-- /drives/HD/Videos/recs/camlog/trash/*.mp4
-- /drives/HD/Videos/recs/Channel Recs/*.mkv
-- /drives/HD/Videos/recs/Channel Recs/*.mp4
-- /drives/HD/Videos/recs/Channel Recs/*.mov
-#- /drives/HD/Videos/recs/Archive/frugal/*.mkv
-#- /drives/HD/Videos/recs/Archive/frugal/*.mp4
-#- /drives/HD/Videos/recs/Archive/frugal/*/*.mkv
-#- /drives/HD/Videos/recs/Archive/frugal/*/*.mp4
-#- /drives/HD/Videos/recs/Channel Recs/*/frugal/*.mkv
-#- /drives/HD/Videos/recs/Channel Recs/*/frugal/*.mp4
-#- /drives/HD/Videos/recs/Channel Recs/*/frugal/*/*.mkv
-#- /drives/HD/Videos/recs/Channel Recs/*/frugal/*/*.mp4
-- /drives/HD/Cosmosis/*.qcow2
-- /drives/SD/VMs/*.qcow2
-- /drives/HD/Cosmosis/Backs/*
-- /drives/HD/Cosmosis/External/Redundant/*
-- /drives/HD/Cosmosis/External/Devices/Temp/*/*
-- /drives/HD/Cosmosis/External/Devices/USB/*
-- /drives/HD/Cosmosis/External/Devices/ProteusV/*
-- /drives/HD/Cosmosis/External/Devices/SoileVas/*
-- /drives/HD/Cosmosis/External/Devices/Momodora/*
-- /drives/HD/Cosmosis/External/Devices/Rosey/*
-#- /drives/HD/Cosmosis/External/**/Temp/*
-- /drives/HD/Cosmosis/External/Internet/Social media backup/previewing/*
-- /drives/HD/Games/SteamLibrary/steamapps/*
-- /drives/SD/Games/SteamLibrary/steamapps/*
+- /drives/*/Piracy/incomplete/*
+- /drives/*/Piracy/Seed/*
+- /drives/*/Piracy/torbacks/share/*
+- /drives/*/Videos/recs/camlog/*.mkv
+- /drives/*/Videos/recs/camlog/*.mp4
+- /drives/*/Videos/recs/camlog/old/*.mkv
+- /drives/*/Videos/recs/camlog/old/*.mp4
+- /drives/*/Videos/recs/camlog/trash/*.mkv
+- /drives/*/Videos/recs/camlog/trash/*.mp4
+- /drives/*/Videos/recs/Channel Recs/*.mkv
+- /drives/*/Videos/recs/Channel Recs/*.mp4
+- /drives/*/Videos/recs/Channel Recs/*.mov
+#- /drives/*/Videos/recs/Archive/frugal/*.mkv
+#- /drives/*/Videos/recs/Archive/frugal/*.mp4
+#- /drives/*/Videos/recs/Archive/frugal/*/*.mkv
+#- /drives/*/Videos/recs/Archive/frugal/*/*.mp4
+#- /drives/*/Videos/recs/Channel Recs/*/frugal/*.mkv
+#- /drives/*/Videos/recs/Channel Recs/*/frugal/*.mp4
+#- /drives/*/Videos/recs/Channel Recs/*/frugal/*/*.mkv
+#- /drives/*/Videos/recs/Channel Recs/*/frugal/*/*.mp4
+- /drives/*/Cosmosis/*.qcow2
+- /drives/*/VMs/*.qcow2
+- /drives/*/Cosmosis/Backs/*
+- /drives/*/Cosmosis/External/Redundant/*
+- /drives/*/Cosmosis/External/Devices/Temp/*/*
+- /drives/*/Cosmosis/External/Devices/USB/*
+- /drives/*/Cosmosis/External/Devices/ProteusV/*
+- /drives/*/Cosmosis/External/Devices/SoileVas/*
+- /drives/*/Cosmosis/External/Devices/Momodora/*
+- /drives/*/Cosmosis/External/Devices/Rosey/*
+#- /drives/*/Cosmosis/External/**/Temp/*
+- /drives/*/Cosmosis/External/Internet/Social media backup/previewing/*
+- SteamLibrary/steamapps/*
 - RPG Maker MZ/data/dlc/*
-- RPG Maker MZ/data/Stuff/Plugins/Unused/*
 - text-generation-webui/models/*
 - text-generation-webui/models/Bad/*
 - text-generation-webui/models/Alt/*
 - StableDiffussion/Models/*
-- /drives/HD/Cosmosis/Redundant/*
-- /drives/HD/Stuff/Downloads/*
-#- /drives/HD/Stuff/Downloads/OldThings/*
-#- /drives/HD/Stuff/Downloads/OldThings.7z
+- /drives/*/Cosmosis/Redundant/*
+- /drives/*/Downloads/*
+#- /drives/*/Downloads/OldThings/*
+#- /drives/*/Downloads/OldThings.7z
 - UEViewer/.git/*
 - Killing Floor 2/Development/*
 - Killing Floor 2/Engine/*
@@ -341,74 +338,72 @@
 - Killing Floor 2/The Art of Killing Floor 2 Digital Artbook.pdf
 - Killing Floor 2/Uninstall/*
 - Killing Floor 2/Binaries/Win64/steam_settings/images/*
-- /drives/HD/Games/Wolfenstein/Return to Castle Wolfenstein/Mods/*
-- /drives/HD/Games/Wolfenstein/Return to Castle Wolfenstein/Fixes/*
-- /drives/HD/Games/Wolfenstein/Return to Castle Wolfenstein/Main/*
-- /drives/HD/Games/Wolfenstein/Return to Castle Wolfenstein/ET/*
-- /drives/HD/Games/Wolfenstein/Return to Castle Wolfenstein/Classic Return to Castle Wolfenstein/*
-- /drives/HD/Games/Wolfenstein/Wolfenstein/base/*
+- Wolfenstein/Return to Castle Wolfenstein/Mods/*
+- Wolfenstein/Return to Castle Wolfenstein/Fixes/*
+- Wolfenstein/Return to Castle Wolfenstein/Main/*
+- Wolfenstein/Return to Castle Wolfenstein/ET/*
+- Wolfenstein/Return to Castle Wolfenstein/Classic Return to Castle Wolfenstein/*
+- Wolfenstein/Wolfenstein/base/*
 - Deep Rock Galactic/*
 - Deep Rock Galactic/FSD/Saved/Crashes/*
 #+ Deep Rock Galactic/FSD/Saved/*
-- /drives/HD/Games/Daemon X Machina/*
-- /drives/HD/Games/Disaster Report 4/*
-- /drives/HD/Games/Dragon Dogma/*
+- Daemon X Machina/*
+- Disaster Report 4/*
+- Dragon Dogma/*
 - ut2004/
-- /drives/SD/Games/Death Stranding/*.dll
-- /drives/SD/Games/Death Stranding/*.exe
-- /drives/SD/Games/Death Stranding/data/*
-- /drives/SD/Games/Death Stranding/Movies/*
-- /drives/HD/Cosmosis/Bases/*.exe
-- /drives/HD/Cosmosis/Bases/*.iso
-- /drives/HD/Cosmosis/Bases/*.msi
-- /drives/HD/Cosmosis/Bases/WinSetup/*.exe
-- /drives/HD/Cosmosis/Bases/WinSetup/*.msi
-- /drives/HD/Cosmosis/MetaSy*/*
+- Death Stranding/*.dll
+- Death Stranding/*.exe
+- Death Stranding/data/*
+- Death Stranding/Movies/*
+- /drives/*/Cosmosis/Bases/*.exe
+- /drives/*/Cosmosis/Bases/*.iso
+- /drives/*/Cosmosis/Bases/*.msi
+- /drives/*/Cosmosis/Bases/WinSetup/*.exe
+- /drives/*/Cosmosis/Bases/WinSetup/*.msi
+- /drives/*/Cosmosis/MetaSy*/*
 - Bottles/*.tar.gz
-- /drives/HD/Cosmosis/AJillS/DaiCary/Edicion*/*
+- /drives/*/Cosmosis/AJillS/DaiCary/Edicion*/*
 # Game mod trash and gamepacks
-- /drives/HD/Games/modding/Creations/Failed and Misc/*
-- /drives/HD/Games/modding/Deep Rock Galactic/*
-- Games/Stuff/modding tools/mint/*
-- DRGPacker4.27-Linux/FSD-WindowsNoEditor/*
-- DRGPacker4.27-Linux/FSD-WindowsNoEditor.pak*
-- /drives/HD/Games/modding/Killing Floor 2/*
-#- /drives/HD/Games/modding/Killing Floor 2/KF2orig.7z
-#- /drives/HD/Games/modding/Killing Floor 2/*/*GamePack.7z
-#- /drives/HD/Games/modding/Killing Floor 2/opt/*
+- /drives/*/Games/modding/Creations/Failed and Misc/*
+- /drives/*/Games/modding/Deep Rock Galactic/*
+- Games/Other/modding tools/mint/*
+- DRGPacker-Linux/FSD-WindowsNoEditor/*
+- DRGPacker-Linux/FSD-WindowsNoEditor.pak*
+- /drives/*/Games/modding/Killing Floor 2/*
+#- /drives/*/Games/modding/Killing Floor 2/KF2orig.7z
+#- /drives/*/Games/modding/Killing Floor 2/*/*GamePack.7z
+#- /drives/*/Games/modding/Killing Floor 2/opt/*
 #- Bottles/**/drive_c/users/**/Documents/My Games/KillingFloor2/*
-# My sacrifices... not enough space.
-- /drives/SD/TempMep
-- /drives/HD/Piracy/Fren/*
-- /drives/HD/Videos/recs/ArchivedRecs/old.tar
-- /drives/HD/*/100/*
-- /drives/HD/*/*/100/*
-- /drives/HD/Games/ALT/DelTis/*
-- /drives/HD/Games/ALT/Alt/*
-- Games/Stuff/Installer/*
-- /drives/HD/Games/*.zip
-- /drives/HD/Games/*.rar
-- /drives/HD/Games/*.7z
-- /drives/HD/Games/*.exe
-- /drives/HD/Games/*.tar*
-- /drives/HD/Games/*.bz2
-- /drives/HD/Games/*.xz
-- /drives/HD/Games/*.AppImage
-- /drives/HD/Games/Minecraft/*
-- Games/Stuff/modding tools/RPGVXAce_RTP.zip
-- Games/Stuff/modding tools/nwjs*
-# My even worse sacrificed stuff! Oh nooo!
-- /drives/HD/Cosmosis/External/**/Full/*
-- /drives/HD/Cosmosis/External/Devices/*/*
-- /drives/HD/Cosmosis/External/Devices/*.7z
-- /drives/HD/Cosmosis/External/Devices/*.img
-- /drives/HD/Piracy/Games/*
-- /drives/HD/Games/100/*
-#- /drives/HD/Videos/Shows/100G/Breaking Bad.tar
-- /drives/HD/Games/ALT/*
-- /drives/HD/Piracy/Movies/*
-- /drives/HD/Piracy/Shows/*
-#- /drives/HD/Videos/Projects/Completed/*
+# What I wanted to backup but couldn't... not enough space.
+- /drives/*/TempPrograms
+- /drives/*/Piracy/Fren/*
+- /drives/*/Videos/recs/ArchivedRecs/old.tar
+- /drives/*/*/Completed/*
+- /drives/*/*/*/Completed/*
+- Games/Other/Installer/*
+- /drives/*/Games/*.zip
+- /drives/*/Games/*.rar
+- /drives/*/Games/*.7z
+- /drives/*/Games/*.exe
+- /drives/*/Games/*.tar*
+- /drives/*/Games/*.bz2
+- /drives/*/Games/*.xz
+- /drives/*/Games/*.AppImage
+- /drives/*/Games/Minecraft/*
+- Games/Other/modding tools/RPGVXAce_RTP.zip
+- Games/Other/modding tools/nwjs*
+# Even worse things I didn't want to exclude
+- /drives/*/Cosmosis/External/**/Full/*
+- /drives/*/Cosmosis/External/Devices/*/*
+- /drives/*/Cosmosis/External/Devices/*.7z
+- /drives/*/Cosmosis/External/Devices/*.img
+- /drives/*/Piracy/Games/*
+- /drives/*/Games/Completed/*
+#- /drives/*/Videos/Shows/Completed/Breaking Bad.tar
+- /drives/*/Games/ALT/*
+- /drives/*/Piracy/Movies/*
+- /drives/*/Piracy/Shows/*
+#- /drives/*/Videos/Projects/Completed/*
 
 # My expected size per drive (update this with yours to know how much space does your external backup device requires)
 # Root 16.6GB
