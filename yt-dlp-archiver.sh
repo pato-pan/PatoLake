@@ -108,7 +108,7 @@ function conveac3() {
 
 probeset=(-v error -select_streams a:0 -of csv=p=0 -show_entries stream=codec_name)
 mpegset=(-n -c:v copy -c:a aac)
-parent="$Music/"
+parent="$Music"
 isparent=""
 compateac3 "$parent"
 parent="$Show/Videos/Archives"
