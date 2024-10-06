@@ -18,8 +18,46 @@ bestanometa=(--embed-thumbnail --embed-chapters -x -c -f ba --audio-format best 
 #antiban='--sleep-requests 1.5 --min-sleep-interval 60 --max-sleep-interval 90' # Depending on many videos you have to download, this is safer but it can take hours. In my case, 5 hours.
 antiban='--sleep-requests 1.5 --min-sleep-interval 3 --max-sleep-interval 30' # My version, much faster, higher risk, untested. Based on my usual timeouts
 #antiban=''
-cd $idlists
+probeset=(-v error -select_streams a:0 -of csv=p=0 -show_entries stream=codec_name)
+mpegset=(-n -c:v copy -c:a aac)
+# mpegset=(-n -c:v copy -c:a fla --compression-level 12) # better quality, significantly higher filesize
 
+# This command will run after you finish downloading all the files in a parent directory.
+function compateac3() {
+	local parent="$1"
+	if [ isparent != "yes" ]; then # runs the conversion on the parent folder.
+		cd "$parent"
+		conveac3
+		isparent="yes"
+	fi
+	for folder in "${parent}"/*; do # recursively runs the conversion in every subfolder
+		if [ -d "${folder}" ]; then
+			echo "$folder"
+			cd "$folder"
+			conveac3
+			compateac3 "$folder"
+		fi
+	done
+}
+function conveac3() {
+    for f in *.m4a; do
+		if [[ $(ffprobe "${probeset[@]}" "$f" | awk -F, '{print $1}') == "eac3" ]]; then
+			mkdir compat
+			id=$f
+			count="${f//[^[]}"
+			for c in $(seq ${#count}); do id=${id#*[}; done; # removes everything before the last [
+			count="${f//[^\]]}"
+			for c in $(seq ${#count}); do id=${id%]*}; done;  # removes everything after the last ]. unnecessary. only helps if I change the name format. usually and preferably, just id=${f%]*} instead and do it above the removal of [
+			yt-dlp $antiban --force-overwrites "${bestanometa[@]}" $id -o "$nameformat"
+#			ffmpeg -i "$f" "${mpegset[@]}" compat/"${f%.m4a}".flac
+			ffmpeg -i "$f" "${mpegset[@]}" compat/"${f%.m4a}".m4a #I know adding m4a here is redundant. It should only be just $f instead. This is only here for consistency.
+			rm "${f%%.*}.temp.m4a"
+			rm "${f%%.*}.webp"
+		fi
+	done
+}
+
+cd $idlists
 #yt-dlp -U
 # --no-check-certificate
 #read -n 1 -t 30 -s
@@ -30,6 +68,10 @@ echo downloading Gaming Music
 yt-dlp $antiban --download-archive gamingmusic.txt --yes-playlist $besta $ytlist"PL00nN9ot3iD8DbeEIvGNml5A9aAOkXaIt" -o "$Music/YTGaming/$nameformat"
 echo "finished the music!"
 read -n 1 -t 3 -s
+echo "Creating compatibility for eac3"
+parent="$Music"
+isparent=""
+compateac3 "$parent"
 
 # ////////////////////////////////////////////////
 
@@ -67,53 +109,7 @@ echo "Daniel Hentschel"
 yt-dlp $antiban --download-archive DanHentschel.txt --match-filter '!is_live & !was_live & is_live != true & was_live != true & live_status != was_live & live_status != is_live & live_status != post_live & live_status != is_upcoming & view_count >=? 60000' $frugal $ytchannel"UCYMKvKclvVtQZbLrV2v-_5g" -o "$Videos/Archives/Daniel Hentschel/$nameformat"
 echo "JCS"
 yt-dlp $antiban --download-archive JCS.txt --match-filter '!is_live & !was_live & is_live != true & was_live != true & live_status != was_live & live_status != is_live & live_status != post_live & live_status != is_upcoming' $videolite $ytchannel"UCYwVxWpjeKFWwu8TML-Te9A" -o "$Videos/Archives/JCS/$nameformat"
-
-echo "Finally. The last step is to create compatibility for some codecs (not extensions or containers, codecs)"
-read -n 1 -t 30 -s
-
-echo "Create compatibility for eac3"
-#note: flaw. Videos will be redownloaded unnecessarily.
-function compateac3() {
-	local parent="$1"
-	if [ isparent != "yes" ]; then # runs the conversion on the parent folder.
-		cd "$parent"
-		conveac3
-		isparent="yes"
-	fi
-	for folder in "${parent}"/*; do # recursively runs the conversion in every subfolder
-		if [ -d "${folder}" ]; then
-			echo "$folder"
-			cd "$folder"
-			conveac3
-			compateac3 "$folder"
-		fi
-	done
-}
-function conveac3() {
-    for f in *.m4a; do
-		if [[ $(ffprobe "${probeset[@]}" "$f" | awk -F, '{print $1}') == "eac3" ]]; then
-			mkdir compat
-			id=$f
-			count="${f//[^[]}"
-			for c in $(seq ${#count}); do id=${id#*[}; done; # removes everything before the last [
-			count="${f//[^\]]}"
-			for c in $(seq ${#count}); do id=${id%]*}; done;  # removes everything after the last ]. unnecessary. only helps if I change the name format. usually and preferably, just id=${f%]*} instead and do it above the removal of [
-			yt-dlp $antiban --force-overwrites "${bestanometa[@]}" $id -o "$nameformat"
-#			ffmpeg -i "$f" "${mpegset[@]}" compat/"${f%.m4a}".flac
-			ffmpeg -i "$f" "${mpegset[@]}" compat/"${f%.m4a}".m4a #I know adding m4a here is redundant. It should only be just $f instead. This is only here for consistency.
-			rm "${f%%.*}.temp.m4a"
-			rm "${f%%.*}.webp"
-		fi
-	done
-}
-
-probeset=(-v error -select_streams a:0 -of csv=p=0 -show_entries stream=codec_name)
-mpegset=(-n -c:v copy -c:a aac)
-# mpegset=(-n -c:v copy -c:a fla --compression-level 12) # better quality, significantly higher filesize
-parent="$Music"
-isparent=""
-compateac3 "$parent"
-parent="$Show/Videos/Archives"
+echo "Creating compatibility for eac3"parent="$Show/Videos/Archives"
 isparent=""
 compateac3 "$parent"
 
