@@ -14,8 +14,9 @@ audiolite='--cookies cookies.txt --embed-metadata --embed-thumbnail --embed-chap
 videolite='--cookies cookies.txt --embed-metadata --embed-thumbnail --embed-chapters --sub-langs all,-live_chat,-rechat -f -f bv*[height<=480]+ba/b[height<=480] -c' # I prefer 360p as lowest, but some videos may not offer 360p, so I go for 480p to play it safe
 frugal='--cookies cookies.txt --embed-metadata --embed-thumbnail --embed-chapters --sub-langs all,-live_chat,-rechat -S +size,+br,+res,+fps --audio-format aac --audio-quality 32k -c' #note to self: don't use -f "wv*[height<=240]+wa*"
 bestanometa=(--embed-thumbnail --embed-chapters -x -c -f ba --audio-format best --audio-quality 0)
-#prevents your account from getting unavailable on all videos, even when watching, when using cookies.txt. This is not foolproof.
-antiban='--sleep-requests 1.5 --min-sleep-interval 60 --max-sleep-interval 90'
+#prevents your account from getting unavailable on all videos, even when watching, when using cookies.txt. This is not foolproof, and it's not necessary in many cases. Recommended when making giant downloads (2k requests in my experience)
+#antiban='--sleep-requests 1.5 --min-sleep-interval 60 --max-sleep-interval 90' # Depending on many videos you have to download, this is safer but it can take hours. In my case, 5 hours.
+antiban='--sleep-requests 1.5 --min-sleep-interval 3 --max-sleep-interval 30' # My version, higher risk, untested. Based on my usual timeouts
 #antiban=''
 cd $idlists
 
