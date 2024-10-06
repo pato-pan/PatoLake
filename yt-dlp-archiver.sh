@@ -99,7 +99,7 @@ function conveac3() {
 			count="${f//[^\]]}"
 			for c in $(seq ${#count}); do id=${id%]*}; done;  # removes everything after the last ]. unnecessary. only helps if I change the name format. usually and preferably, just id=${f%]*} instead and do it above the removal of [
 			yt-dlp $antiban --force-overwrites "${bestanometa[@]}" $id -o "$nameformat"
-#			ffmpeg -i "$f" "${mpegset[@]}" compat/"${f%.m4a}".flac # better quality, significantly higher filesize
+#			ffmpeg -i "$f" "${mpegset[@]}" compat/"${f%.m4a}".flac
 			ffmpeg -i "$f" "${mpegset[@]}" compat/"${f%.m4a}".m4a #I know adding m4a here is redundant. It should only be just $f instead. This is only here for consistency.
 			rm "${f%%.*}.temp.m4a"
 			rm "${f%%.*}.webp"
@@ -109,6 +109,7 @@ function conveac3() {
 
 probeset=(-v error -select_streams a:0 -of csv=p=0 -show_entries stream=codec_name)
 mpegset=(-n -c:v copy -c:a aac)
+# mpegset=(-n -c:v copy -c:a fla --compression-level 12) # better quality, significantly higher filesize
 parent="$Music"
 isparent=""
 compateac3 "$parent"
