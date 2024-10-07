@@ -63,9 +63,9 @@ function frugalizer() { # provides a video of much lower filesize than remnant.
 		else
 			mkdir "$parent/temp"
 			ffmpeg -hwaccel cuda -i "$f" -y -c:v libx265 -r 10.0 -b:v 2k -maxrate 5k -minrate 0 -preset slow -c:a aac -b:a 32k -ar 32k "$parent/temp/$filename"
-			echo "$f" >> "$idlists/frugal.txt"
 		fi
-	done
+		echo "$f" >> "$idlists/frugal.txt"
+ 	done
  	mv -f "$parent/temp/"* "$parent/"
 	rm -r "$parent/temp/"
 }
