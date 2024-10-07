@@ -37,13 +37,13 @@ function conveac3() {
       			if grep -Fxq "$f" "$idlists/conveac3.txt"; then # checks if the file has already been converted
 				:
     			else
-   				rm "${f%%.*}.temp.m4a"
+   				# left overs from yt-dlp errors. Always the case when --embed-metadata is used on a eac3 codec.
+       				rm "${f%%.*}.temp.m4a"
 				rm "${f%%.*}.webp"
 				yt-dlp $antiban --force-overwrites "${bestanometa[@]}" $id -o "$dori/$nameformat"
 				success=$?
        				#ffmpeg -i "$f" "${mpegset[@]}" compat/"${f%.m4a}".flac
 				ffmpeg -i "$f" "${mpegset[@]}" compat/"${f%.m4a}".m4a #I know adding m4a here is redundant. It should only be just $f instead. This is only here for consistency.
-    				# left overs from yt-dlp errors. Always the case when --embed-metadata is used on a eac3 file.
     				if [ "$(($success+$?))" -eq 0 ]; then echo "$f" >> "$idlists/conveac3.txt"; fi; # adds to archive only if the previous command was successful. Equivalent to yt-dlp's download archive. Necessary because in yt-dlp you can't specify the directory of the download archive without cd'ing into it, and I don't want to redownload the files every time the script is run.
     			fi
 		fi
@@ -68,7 +68,7 @@ function frugalizer() { # provides a video of much lower filesize than remnant.
 		fi
  	done
  	mv -f "$parent/temp/"* "$parent/"
-	rm -r "$parent/temp/"
+	rm -r "$parent/temp"
 }
 
 cd $idlists
