@@ -7,11 +7,14 @@ Music="~/Music"
 Videos="~/Videos"
 ytlist="https://www.youtube.com/playlist?list="
 ytchannel="https://www.youtube.com/channel/"
-besta='--cookies cookies.txt --embed-metadata --embed-thumbnail --embed-chapters -x -c -f ba --audio-format best --audio-quality 0'
-bestmp3='--cookies cookies.txt --embed-metadata --embed-thumbnail --embed-chapters -x -c -f ba --audio-format mp3 --audio-quality 0'
-bestv='--cookies cookies.txt --embed-metadata --embed-thumbnail --sub-langs all,-live_chat,-rechat --embed-chapters -c'
-audiolite='--cookies cookies.txt --embed-metadata --embed-thumbnail --embed-chapters -x -c --audio-format mp3 --audio-quality 96k'
-videolite='--cookies cookies.txt --embed-metadata --embed-thumbnail --embed-chapters --sub-langs all,-live_chat,-rechat -f -f bv*[height<=480]+ba/b[height<=480] -c' # I prefer 360p as lowest, but some videos may not offer 360p, so I go for 480p to play it safe
+default='--cookies cookies.txt --embed-metadata --embed-thumbnail --embed-chapters -c  --write-thumbnail'
+besta='-x -f ba --audio-format best --audio-quality 0'
+bestmp3='-x -f ba --audio-format mp3 --audio-quality 0'
+audiolite='-x --audio-format mp3 --audio-quality 64k'
+bestv='--sub-langs all,-live_chat,-rechat'
+v1080p='--sub-langs all,-live_chat,-rechat -f bv*[height<=1080]+ba/b[height<=1080]'
+v720p='--sub-langs all,-live_chat,-rechat -f bv*[height<=720]+ba/b[height<=720]'
+v480p='--sub-langs all,-live_chat,-rechat -f bv*[height<=480]+ba/b[height<=480]' # I prefer 360p as lowest, but some videos may not offer 360p, so I go for 480p to play it safe
 frugal='--cookies cookies.txt --embed-metadata --embed-thumbnail --embed-chapters --sub-langs all,-live_chat,-rechat -S +size,+br,+res,+fps --audio-format aac --audio-quality 32k -c' #note to self: don't use -f "wv*[height<=240]+wa*"
 bestanometa=(--embed-thumbnail --embed-chapters -x -c -f ba --audio-format best --audio-quality 0)
 #prevents your account from getting unavailable on all videos, even when watching, when using cookies.txt. This is not foolproof, and it's not necessary in many cases. Recommended when making giant downloads (2k requests in my experience)
