@@ -20,7 +20,7 @@ antiban='--sleep-requests 1.5 --min-sleep-interval 3 --max-sleep-interval 30' # 
 #antiban=''
 probeset=(-v error -select_streams a:0 -of csv=p=0 -show_entries stream=codec_name)
 mpegset=(-n -c:v copy -c:a aac)
-# mpegset=(-n -c:v copy -c:a fla --compression-level 12) # better quality, significantly higher filesize
+# mpegset=(-n -c:v copy -c:a flac --compression-level 12) # better quality, significantly higher filesize
 
 # This command will run after you finish downloading all the files in a parent directory.
 function compateac3() {
