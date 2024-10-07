@@ -109,7 +109,7 @@ function conveac3() {
 
 probeset=(-v error -select_streams a:0 -of csv=p=0 -show_entries stream=codec_name)
 mpegset=(-n -c:v copy -c:a aac)
-# mpegset=(-n -c:v copy -c:a fla --compression-level 12) # better quality, significantly higher filesize
+#mpegset=(-n -c:v copy -c:a flac --compression-level 12) # better quality, significantly higher filesize
 parent="$Music"
 isparent=""
 compateac3 "$parent"
