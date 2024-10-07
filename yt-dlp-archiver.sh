@@ -62,9 +62,10 @@ cd $idlists
 # --no-check-certificate
 #read -n 1 -t 30 -s
 echo downloading MyMusic Playlist
-yt-dlp $antiban --download-archive mymusic.txt --yes-playlist $besta $ytlist"PLmxPrb5Gys4cSHD1c9XtiAHO3FCqsr1OP" -o "$Music/YT/$nameformat"
 read -n 1 -t 3 -s
+yt-dlp $antiban --download-archive mymusic.txt --yes-playlist $besta $ytlist"PLmxPrb5Gys4cSHD1c9XtiAHO3FCqsr1OP" -o "$Music/YT/$nameformat"
 echo downloading Gaming Music
+read -n 1 -t 3 -s
 yt-dlp $antiban --download-archive gamingmusic.txt --yes-playlist $besta $ytlist"PL00nN9ot3iD8DbeEIvGNml5A9aAOkXaIt" -o "$Music/YTGaming/$nameformat"
 echo "finished the music!"
 read -n 1 -t 3 -s
@@ -80,17 +81,17 @@ compateac3 "$parent"
 echo downloading some collections
 read -n 1 -t 3 -s
 echo funny videos from reddit
+read -n 1 -t 3 -s
 yt-dlp $antiban --download-archive funnyreddit.txt --yes-playlist $bestv $ytlist"PL3hSzXlZKYpM8XhxS0v7v4SB2aWLeCcUj" -o "$Videos/funnyreddit/$nameformat"
-read -n 1 -t 3 -s
 echo Dance practice
+read -n 1 -t 3 -s
 yt-dlp $antiban --download-archive willit.txt --yes-playlist $bestv $ytlist"PL1F2E2EF37B160E82" -o "$Videos/Dance Practice/$nameformat"
-read -n 1 -t 3 -s
 echo Soundux Soundboard
-yt-dlp $antiban --download-archive soundboard.txt --yes-playlist $bestmp3 $ytlist"PLVOrGcOh_6kXwPvLDl-Jke3iq3j9JQDPB" -o "$Music/soundboard/$nameformat"
 read -n 1 -t 3 -s
+yt-dlp $antiban --download-archive soundboard.txt --yes-playlist $bestmp3 $ytlist"PLVOrGcOh_6kXwPvLDl-Jke3iq3j9JQDPB" -o "$Music/soundboard/$nameformat"
 echo Videos to send as a message
+read -n 1 -t 3 -s
 yt-dlp $antiban --download-archive fweapons.txt $bestv --recode-video mp4 $ytlist"PLE3oUPGlbxnK516pl4i256e4Nx4j2qL2c" -o "$Videos/forumweapons/$nameformat" #alternatively -S ext:mp4:m4a or -f "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b"
-read -n 1 -t 180 -s
 echo Podcast Episodes
 read -n 1 -t 3 -s
 yt-dlp $antiban --download-archive QChat_R.txt $audiolite $ytlist"PLJkXhqcWoCzL-p07DJh_f7JHQBFTVIg-o" -o "$Music/Podcasts/$nameformat"
